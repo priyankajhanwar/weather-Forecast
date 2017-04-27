@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<body ng-app="forecastModule">
+	<div ng-controller="weatherCtrl">
+		<input type="text"  ng-model="cityName" placeholder="city name">
+		<button type="submit" ng-click="search(cityName)">Search</button>
+		<h6>Temperature:{{value.list[0].main.temp}}</h6> {{cityName}}{{value.list[0].weather[0].main}}
+		<h6>Pressure:{{value.list[0].main.pressure}}hpa</h6> 
+		<h6>Humidity:{{value.list[0].main.humidity}}</h6>
+	<h6>Wind Speed:{{value.list[0].wind}}m/s</h6>
+
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script type="text/javascript" src="weatherModule.js"></script>
+<!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+-->
+</body>
+</html>
